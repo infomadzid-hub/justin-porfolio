@@ -180,7 +180,7 @@ export default function Portfolio() {
                 <Button
                   size="lg"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
-                  onClick={() => window.open("/Justin-Marius CV.pd", "_blank")}
+                  onClick={() => window.open("/Justin-Marius CV.pdf", "_blank")}
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Télécharger CV
