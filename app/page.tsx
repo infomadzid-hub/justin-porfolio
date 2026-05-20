@@ -277,7 +277,7 @@ export default function Portfolio() {
           <h2 className="text-4xl font-bold text-center mb-4 text-blue-400">Certifications</h2>
           <p className="text-center text-gray-300 mb-12">Cliquez sur les certifications pour afficher les détails et les preuves</p>
           <Tabs defaultValue="microsoft" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 bg-gray-700 mb-8">
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 bg-gray-700 mb-8 gap-1">
               <TabsTrigger value="microsoft" className="data-[state=active]:bg-blue-600 transition-all duration-300">
                 Microsoft Learn
               </TabsTrigger>
@@ -285,7 +285,13 @@ export default function Portfolio() {
                 Cyberini
               </TabsTrigger>
               <TabsTrigger value="splunk" className="data-[state=active]:bg-blue-600 transition-all duration-300">
-                Splunk Education
+                Splunk
+              </TabsTrigger>
+              <TabsTrigger value="cisco" className="data-[state=active]:bg-blue-600 transition-all duration-300">
+                CISCO NetAcad
+              </TabsTrigger>
+              <TabsTrigger value="securityBlueTeam" className="data-[state=active]:bg-blue-600 transition-all duration-300">
+                Blue Team
               </TabsTrigger>
             </TabsList>
 
@@ -334,6 +340,54 @@ export default function Portfolio() {
                     <CardContent className="p-4 flex items-start gap-3">
                       <Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5 group-hover:animate-pulse" />
                       <span className="text-white text-sm leading-relaxed">{cert.title}</span>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="cisco" className="mt-8 animate-fadeIn">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {certifications.cisco.map((cert) => (
+                  <Card
+                    key={cert.id}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
+                    onClick={() => window.open(cert.image, '_blank')}
+                  >
+                    <CardContent className="p-4 flex flex-col gap-3">
+                      <div className="flex items-start gap-3">
+                        <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <span className="text-white text-sm leading-relaxed font-semibold">{cert.title}</span>
+                      </div>
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title}
+                        className="w-full h-auto rounded border border-gray-600"
+                      />
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="securityBlueTeam" className="mt-8 animate-fadeIn">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {certifications.securityBlueTeam.map((cert) => (
+                  <Card
+                    key={cert.id}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
+                    onClick={() => window.open(cert.image, '_blank')}
+                  >
+                    <CardContent className="p-4 flex flex-col gap-3">
+                      <div className="flex items-start gap-3">
+                        <Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5 group-hover:animate-pulse" />
+                        <span className="text-white text-sm leading-relaxed font-semibold">{cert.title}</span>
+                      </div>
+                      <img 
+                        src={cert.image} 
+                        alt={cert.title}
+                        className="w-full h-auto rounded border border-gray-600"
+                      />
                     </CardContent>
                   </Card>
                 ))}

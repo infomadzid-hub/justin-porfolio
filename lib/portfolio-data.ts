@@ -170,6 +170,20 @@ export const certifications = {
     { id: 13, title: "SOC Essentials: Investigating with Splunk (free eLearning)" },
     { id: 14, title: "Introduction to Detection Engineering with Splunk" },
   ],
+  cisco: [
+    {
+      id: 1,
+      title: "Ethical Hacker",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ethical%20Hacker-cLTm1gEMbw5tc3dw3rCfDO1w6JUG2x.png",
+    },
+  ],
+  securityBlueTeam: [
+    {
+      id: 1,
+      title: "Blue Team Junior Analyst Training Pathway",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Blue-uJ9Z0s8xbahnmzF1mrAnHUGQbOfeXj.png",
+    },
+  ],
 }
 
 export const microsoftCertificates = {
