@@ -101,11 +101,11 @@ export const projects = [
   },
   {
     id: 12,
-    title: "Alternance - Entreprise AKATA",
-    description: "Spécialiste en Cybersécurité",
-    tags: ["Alternance", "Cybersécurité", "SOC", "SIEM", "Wazuh", "Splunk", "Détection de menaces"],
+    title: "Alternance - Entreprise AKATA Goavana",
+    description: "Junior en Cybersécurité",
+    tags: ["Alternance", "Junior", "Cybersécurité", "SOC", "SIEM", "Wazuh", "Splunk", "Détection de menaces"],
     details:
-      "Alternance en tant que Spécialiste en Cybersécurité chez AKATA. Contributions à la sécurisation des infrastructures, mise en place de solutions de monitoring avancées, investigation des incidents de sécurité, et optimisation des processus de détection et réponse aux menaces.",
+      "Alternance en tant que Junior en Cybersécurité chez AKATA Goavana. Contributions à la sécurisation des infrastructures, mise en place de solutions de monitoring avancées avec Wazuh et Splunk, investigation des incidents de sécurité, développement de dashboards SIEM, et optimisation des processus de détection et réponse aux menaces.",
   },
 ]
 
