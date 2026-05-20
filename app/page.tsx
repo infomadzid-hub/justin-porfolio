@@ -276,16 +276,16 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-4 text-blue-400">Certifications</h2>
           <p className="text-center text-gray-300 mb-12">Cliquez sur les certifications pour afficher les détails et les preuves</p>
-          <Tabs defaultValue="microsoft" className="w-full">
+          <Tabs defaultValue="splunk" className="w-full">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 bg-gray-700 mb-8 gap-1">
-              <TabsTrigger value="microsoft" className="data-[state=active]:bg-blue-600 transition-all duration-300">
-                Microsoft Learn
+              <TabsTrigger value="splunk" className="data-[state=active]:bg-blue-600 transition-all duration-300">
+                Splunk
               </TabsTrigger>
               <TabsTrigger value="cyberini" className="data-[state=active]:bg-blue-600 transition-all duration-300">
                 Cyberini
               </TabsTrigger>
-              <TabsTrigger value="splunk" className="data-[state=active]:bg-blue-600 transition-all duration-300">
-                Splunk
+              <TabsTrigger value="microsoft" className="data-[state=active]:bg-blue-600 transition-all duration-300">
+                Microsoft Learn
               </TabsTrigger>
               <TabsTrigger value="cisco" className="data-[state=active]:bg-blue-600 transition-all duration-300">
                 CISCO NetAcad
