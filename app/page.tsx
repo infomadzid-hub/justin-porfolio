@@ -300,12 +300,21 @@ export default function Portfolio() {
                 {certifications.microsoft.map((cert) => (
                   <Card
                     key={cert.id}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group"
-                    onClick={() => handleCertificateClick(cert.title)}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
+                    onClick={() => window.open(cert.image, '_blank')}
                   >
-                    <CardContent className="p-4 flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
-                      <span className="text-white text-sm leading-relaxed">{cert.title}</span>
+                    <CardContent className="p-4 flex flex-col gap-3">
+                      <div className="flex items-start gap-3">
+                        <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <span className="text-white text-sm leading-relaxed font-semibold">{cert.title}</span>
+                      </div>
+                      {cert.image && (
+                        <img 
+                          src={cert.image} 
+                          alt={cert.title}
+                          className="w-full h-auto rounded border border-gray-600"
+                        />
+                      )}
                     </CardContent>
                   </Card>
                 ))}
@@ -317,12 +326,21 @@ export default function Portfolio() {
                 {certifications.cyberini.map((cert) => (
                   <Card
                     key={cert.id}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group"
-                    onClick={() => handleCyberiniCertificateClick(cert.title)}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
+                    onClick={() => cert.image && window.open(cert.image, '_blank')}
                   >
-                    <CardContent className="p-4 flex items-start gap-3">
-                      <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
-                      <span className="text-white text-sm leading-relaxed">{cert.title}</span>
+                    <CardContent className="p-4 flex flex-col gap-3">
+                      <div className="flex items-start gap-3">
+                        <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
+                        <span className="text-white text-sm leading-relaxed font-semibold">{cert.title}</span>
+                      </div>
+                      {cert.image && (
+                        <img 
+                          src={cert.image} 
+                          alt={cert.title}
+                          className="w-full h-auto rounded border border-gray-600"
+                        />
+                      )}
                     </CardContent>
                   </Card>
                 ))}
@@ -334,12 +352,21 @@ export default function Portfolio() {
                 {certifications.splunk.map((cert) => (
                   <Card
                     key={cert.id}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group"
-                    onClick={() => handleSplunkCertificateClick(cert.title)}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
+                    onClick={() => cert.image && window.open(cert.image, '_blank')}
                   >
-                    <CardContent className="p-4 flex items-start gap-3">
-                      <Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5 group-hover:animate-pulse" />
-                      <span className="text-white text-sm leading-relaxed">{cert.title}</span>
+                    <CardContent className="p-4 flex flex-col gap-3">
+                      <div className="flex items-start gap-3">
+                        <Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5 group-hover:animate-pulse" />
+                        <span className="text-white text-sm leading-relaxed font-semibold">{cert.title}</span>
+                      </div>
+                      {cert.image && (
+                        <img 
+                          src={cert.image} 
+                          alt={cert.title}
+                          className="w-full h-auto rounded border border-gray-600"
+                        />
+                      )}
                     </CardContent>
                   </Card>
                 ))}
