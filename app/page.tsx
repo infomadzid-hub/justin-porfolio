@@ -301,7 +301,11 @@ export default function Portfolio() {
                   <Card
                     key={cert.id}
                     className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
-                    onClick={() => window.open(cert.image, '_blank')}
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.open(cert.image, '_blank')
+                      }
+                    }}
                   >
                     <CardContent className="p-4 flex flex-col gap-3">
                       <div className="flex items-start gap-3">
@@ -327,7 +331,11 @@ export default function Portfolio() {
                   <Card
                     key={cert.id}
                     className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
-                    onClick={() => cert.image && window.open(cert.image, '_blank')}
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && cert.image) {
+                        window.open(cert.image, '_blank')
+                      }
+                    }}
                   >
                     <CardContent className="p-4 flex flex-col gap-3">
                       <div className="flex items-start gap-3">
@@ -353,7 +361,11 @@ export default function Portfolio() {
                   <Card
                     key={cert.id}
                     className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
-                    onClick={() => cert.image && window.open(cert.image, '_blank')}
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && cert.image) {
+                        window.open(cert.image, '_blank')
+                      }
+                    }}
                   >
                     <CardContent className="p-4 flex flex-col gap-3">
                       <div className="flex items-start gap-3">
@@ -379,7 +391,11 @@ export default function Portfolio() {
                   <Card
                     key={cert.id}
                     className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
-                    onClick={() => window.open(cert.image, '_blank')}
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.open(cert.image, '_blank')
+                      }
+                    }}
                   >
                     <CardContent className="p-4 flex flex-col gap-3">
                       <div className="flex items-start gap-3">
@@ -403,7 +419,11 @@ export default function Portfolio() {
                   <Card
                     key={cert.id}
                     className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group overflow-hidden"
-                    onClick={() => window.open(cert.image, '_blank')}
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.open(cert.image, '_blank')
+                      }
+                    }}
                   >
                     <CardContent className="p-4 flex flex-col gap-3">
                       <div className="flex items-start gap-3">
