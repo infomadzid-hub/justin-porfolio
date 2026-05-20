@@ -93,6 +93,77 @@ export const projects = [
   },
 ]
 
+export const certifications = {
+  microsoft: [
+    {
+      id: 1,
+      title: "Defend against Cyberthreats with Microsoft Defender XDR lab exercises",
+      image: "/microsoft-defender-certificate.jpg",
+    },
+    {
+      id: 2,
+      title: "Perform device investigations in Microsoft Defender for Endpoint",
+      image: "/microsoft-cert-1.png",
+    },
+    {
+      id: 3,
+      title: "Configure and manage automation using Microsoft Defender for Endpoint",
+      image: "/microsoft-cert-2.png",
+    },
+    {
+      id: 4,
+      title: "Deploy the Microsoft Defender for Endpoint environment",
+      image: "/microsoft-cert-3.png",
+    },
+    {
+      id: 5,
+      title: "Configure for alerts and detections in Microsoft Defender for Endpoint",
+      image: "/microsoft-cert-4.png",
+    },
+    {
+      id: 6,
+      title: "Mitigate incidents using Microsoft Defender",
+      image: "/microsoft-cert-5.png",
+    },
+    {
+      id: 7,
+      title: "Describe cloud computing",
+      image: "/microsoft-cert-6.png",
+    },
+    {
+      id: 8,
+      title: "Introduction to Microsoft Sentinel",
+      image: "/microsoft-cert-7.png",
+    },
+  ],
+  cyberini: [
+    {
+      id: 1,
+      title: "6 Façons de se faire Pirater en 5 minutes(Gratuit)",
+    },
+    {
+      id: 2,
+      title: "MOOC Cybersécurité de Cyberini",
+    },
+  ],
+  splunk: [
+    { id: 1, title: "Intro to Splunk (eLearning)" },
+    { id: 2, title: "Introduction to Dashboards (eLearning)" },
+    { id: 3, title: "Search Under the Hood (eLearning)" },
+    { id: 4, title: "Using Fields (eLearning)" },
+    { id: 5, title: "Visualizations (eLearning)" },
+    { id: 6, title: "Introduction to Enterprise Security (eLearning)" },
+    { id: 7, title: "ES 8.0 Updates for the Splunk SOC (eLearning)" },
+    { id: 8, title: "The Cybersecurity Landscape (eLearning)" },
+    { id: 9, title: "Understanding Threats and Attacks (eLearning)" },
+    { id: 10, title: "Security Operations and the Defense Analyst (eLearning)" },
+    { id: 11, title: "Data and Tools for Defense Analysts (eLearning)" },
+    { id: 12, title: "The Art of Investigation (eLearning)" },
+    { id: 13, title: "SOC Essentials: Investigating with Splunk (free eLearning)" },
+    { id: 14, title: "Introduction to Detection Engineering with Splunk" },
+  ],
+}
+
 export const microsoftCertificates = {
   "Defend against Cyberthreats with Microsoft Defender XDR lab exercises": "/microsoft-defender-certificate.jpg",
   "Perform device investigations in Microsoft Defender for Endpoint": "/microsoft-cert-1.png",

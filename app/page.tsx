@@ -15,7 +15,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Download, Mail, Phone, Youtube, MessageCircle, CheckCircle } from "lucide-react"
 import Image from "next/image"
-import { skills, projects, microsoftCertificates } from "@/lib/portfolio-data"
+import { skills, projects, microsoftCertificates, certifications } from "@/lib/portfolio-data"
 import { CertificateModal } from "@/components/certificate-modal"
 
 export default function Portfolio() {
@@ -274,128 +274,66 @@ export default function Portfolio() {
       {/* Certifications */}
       <section id="certifications" className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-400">Certifications</h2>
-          <p className="text-center text-gray-300 mb-8">Cliquez sur les certifications pour afficher les détails et les preuves</p>
+          <h2 className="text-4xl font-bold text-center mb-4 text-blue-400">Certifications</h2>
+          <p className="text-center text-gray-300 mb-12">Cliquez sur les certifications pour afficher les détails et les preuves</p>
           <Tabs defaultValue="microsoft" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 bg-gray-700">
-              <TabsTrigger value="microsoft" className="data-[state=active]:bg-blue-600">
+            <TabsList className="grid w-full grid-cols-3 bg-gray-700 mb-8">
+              <TabsTrigger value="microsoft" className="data-[state=active]:bg-blue-600 transition-all duration-300">
                 Microsoft Learn
               </TabsTrigger>
-              <TabsTrigger value="cyberini" className="data-[state=active]:bg-blue-600">
+              <TabsTrigger value="cyberini" className="data-[state=active]:bg-blue-600 transition-all duration-300">
                 Cyberini
               </TabsTrigger>
-              <TabsTrigger value="splunk" className="data-[state=active]:bg-blue-600">
+              <TabsTrigger value="splunk" className="data-[state=active]:bg-blue-600 transition-all duration-300">
                 Splunk Education
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="microsoft" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  "Defend against Cyberthreats with Microsoft Defender XDR lab exercises",
-                  "Perform device investigations in Microsoft Defender for Endpoint",
-                  "Configure and manage automation using Microsoft Defender for Endpoint",
-                  "Deploy the Microsoft Defender for Endpoint environment",
-                  "Configure for alerts and detections in Microsoft Defender for Endpoint",
-                  "Mitigate incidents using Microsoft Defender",
-                  "Describe cloud computing",
-                  "Introduction to Microsoft Sentinel",
-                ].map((cert, index) => (
+            <TabsContent value="microsoft" className="mt-8 animate-fadeIn">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {certifications.microsoft.map((cert) => (
                   <Card
-                    key={index}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 transition-all duration-300 cursor-pointer"
-                    onClick={() => handleCertificateClick(cert)}
+                    key={cert.id}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                    onClick={() => handleCertificateClick(cert.title)}
                   >
-                    <CardContent className="p-4 flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-white text-sm">{cert}</span>
+                    <CardContent className="p-4 flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-white text-sm leading-relaxed">{cert.title}</span>
                     </CardContent>
                   </Card>
                 ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="cyberini" className="mt-8">
+            <TabsContent value="cyberini" className="mt-8 animate-fadeIn">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {["6 Façons de se faire Pirater en 5 minutes(Gratuit)", "MOOC Cybersécurité de Cyberini"].map(
-                  (cert, index) => (
-                    <Card
-                      key={index}
-                      className="bg-gray-800 border-gray-700 hover:border-blue-400 transition-all duration-300 cursor-pointer"
-                      onClick={() => handleCyberiniCertificateClick(cert)}
-                    >
-                      <CardContent className="p-4 flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-white text-sm">{cert}</span>
-                      </CardContent>
-                    </Card>
-                  ),
-                )}
+                {certifications.cyberini.map((cert) => (
+                  <Card
+                    key={cert.id}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                    onClick={() => handleCyberiniCertificateClick(cert.title)}
+                  >
+                    <CardContent className="p-4 flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-white text-sm leading-relaxed">{cert.title}</span>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </TabsContent>
 
-            <TabsContent value="splunk" className="mt-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  "Intro to Splunk (eLearning)",
-                  "Introduction to Dashboards (eLearning)",
-                  "Search Under the Hood (eLearning)",
-                  "Using Fields (eLearning)",
-                  "Visualizations (eLearning)",
-                  "Introduction to Enterprise Security (eLearning)",
-                  "ES 8.0 Updates for the Splunk SOC (eLearning)",
-                  "The Cybersecurity Landscape (eLearning)",
-                  "Understanding Threats and Attacks (eLearning)",
-                  "Security Operations and the Defense Analyst (eLearning)",
-                  "Data and Tools for Defense Analysts (eLearning)",
-                  "The Art of Investigation (eLearning)",
-                  "SOC Essentials: Investigating with Splunk (free eLearning)",
-                  "Introduction to Detection Engineering with Splunk",
-                ].map((cert, index) => (
+            <TabsContent value="splunk" className="mt-8 animate-fadeIn">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {certifications.splunk.map((cert) => (
                   <Card
-                    key={index}
-                    className={`bg-gray-800 border-gray-700 transition-all duration-300 ${
-                      cert === "Intro to Splunk (eLearning)" ||
-                      cert === "Introduction to Dashboards (eLearning)" ||
-                      cert === "Search Under the Hood (eLearning)" ||
-                      cert === "Using Fields (eLearning)" ||
-                      cert === "Visualizations (eLearning)" ||
-                      cert === "Introduction to Enterprise Security (eLearning)" ||
-                      cert === "ES 8.0 Updates for the Splunk SOC (eLearning)" ||
-                      cert === "The Cybersecurity Landscape (eLearning)" ||
-                      cert === "Understanding Threats and Attacks (eLearning)" ||
-                      cert === "Security Operations and the Defense Analyst (eLearning)" ||
-                      cert === "Data and Tools for Defense Analysts (eLearning)" ||
-                      cert === "The Art of Investigation (eLearning)" ||
-                      cert === "SOC Essentials: Investigating with Splunk (free eLearning)" ||
-                      cert === "Introduction to Detection Engineering with Splunk"
-                        ? "hover:border-blue-400 cursor-pointer"
-                        : ""
-                    }`}
-                    onClick={() => {
-                      if (
-                        cert === "Intro to Splunk (eLearning)" ||
-                        cert === "Introduction to Dashboards (eLearning)" ||
-                        cert === "Search Under the Hood (eLearning)" ||
-                        cert === "Using Fields (eLearning)" ||
-                        cert === "Visualizations (eLearning)" ||
-                        cert === "Introduction to Enterprise Security (eLearning)" ||
-                        cert === "ES 8.0 Updates for the Splunk SOC (eLearning)" ||
-                        cert === "The Cybersecurity Landscape (eLearning)" ||
-                        cert === "Understanding Threats and Attacks (eLearning)" ||
-                        cert === "Security Operations and the Defense Analyst (eLearning)" ||
-                        cert === "Data and Tools for Defense Analysts (eLearning)" ||
-                        cert === "The Art of Investigation (eLearning)" ||
-                        cert === "SOC Essentials: Investigating with Splunk (free eLearning)" ||
-                        cert === "Introduction to Detection Engineering with Splunk"
-                      ) {
-                        handleSplunkCertificateClick(cert)
-                      }
-                    }}
+                    key={cert.id}
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                    onClick={() => handleSplunkCertificateClick(cert.title)}
                   >
-                    <CardContent className="p-4 flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-white text-sm">{cert}</span>
+                    <CardContent className="p-4 flex items-start gap-3">
+                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-white text-sm leading-relaxed">{cert.title}</span>
                     </CardContent>
                   </Card>
                 ))}
