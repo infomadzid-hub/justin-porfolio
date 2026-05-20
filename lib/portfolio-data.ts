@@ -91,6 +91,14 @@ export const projects = [
     details:
       "Participation à des challenges CTF Blue Team axés sur Splunk avec maîtrise du langage SPL pour la recherche d'indicateurs de compromission et l'analyse de logs en temps réel.",
   },
+  {
+    id: 11,
+    title: "Stage 3 mois - Entreprise AKATA GOAVANA",
+    description: "SOC Cloud-Native : Surveillance Proactive de Kubernetes avec Falco, Wazuh et Splunk",
+    tags: ["Stage", "SOC", "Cloud-Native", "Kubernetes", "Falco", "Wazuh", "Splunk"],
+    details:
+      "Stage de 3 mois en tant que SOC Analyst dans un environnement cloud-native. Mise en place et optimisation de la surveillance proactive de clusters Kubernetes avec Falco pour la détection en temps réel, Wazuh pour la corrélation d'événements et Splunk pour l'analyse centralisée et la création de dashboards de sécurité avancés.",
+  },
 ]
 
 export const certifications = {

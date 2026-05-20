@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Download, Mail, Phone, Youtube, MessageCircle, CheckCircle } from "lucide-react"
+import { Download, Mail, Phone, Youtube, MessageCircle, CheckCircle, ArrowRight, Zap } from "lucide-react"
 import Image from "next/image"
 import { skills, projects, microsoftCertificates, certifications } from "@/lib/portfolio-data"
 import { CertificateModal } from "@/components/certificate-modal"
@@ -294,11 +294,11 @@ export default function Portfolio() {
                 {certifications.microsoft.map((cert) => (
                   <Card
                     key={cert.id}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group"
                     onClick={() => handleCertificateClick(cert.title)}
                   >
                     <CardContent className="p-4 flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
                       <span className="text-white text-sm leading-relaxed">{cert.title}</span>
                     </CardContent>
                   </Card>
@@ -311,11 +311,11 @@ export default function Portfolio() {
                 {certifications.cyberini.map((cert) => (
                   <Card
                     key={cert.id}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group"
                     onClick={() => handleCyberiniCertificateClick(cert.title)}
                   >
                     <CardContent className="p-4 flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <ArrowRight className="h-5 w-5 text-blue-400 flex-shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform duration-300" />
                       <span className="text-white text-sm leading-relaxed">{cert.title}</span>
                     </CardContent>
                   </Card>
@@ -328,11 +328,11 @@ export default function Portfolio() {
                 {certifications.splunk.map((cert) => (
                   <Card
                     key={cert.id}
-                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105"
+                    className="bg-gray-800 border-gray-700 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-400/20 transition-all duration-300 cursor-pointer transform hover:scale-105 group"
                     onClick={() => handleSplunkCertificateClick(cert.title)}
                   >
                     <CardContent className="p-4 flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <Zap className="h-5 w-5 text-yellow-400 flex-shrink-0 mt-0.5 group-hover:animate-pulse" />
                       <span className="text-white text-sm leading-relaxed">{cert.title}</span>
                     </CardContent>
                   </Card>
