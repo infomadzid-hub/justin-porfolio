@@ -275,6 +275,7 @@ export default function Portfolio() {
       <section id="certifications" className="py-20 bg-gray-800/50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-400">Certifications</h2>
+          <p className="text-center text-gray-300 mb-8">Cliquez sur les certifications pour afficher les détails et les preuves</p>
           <Tabs defaultValue="microsoft" className="w-full">
             <TabsList className="grid w-full grid-cols-3 bg-gray-700">
               <TabsTrigger value="microsoft" className="data-[state=active]:bg-blue-600">
