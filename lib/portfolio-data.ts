@@ -8,6 +8,7 @@ export const skills = [
   { name: "Zeek", description: "Network Analysis Framework", icon: Eye },
   { name: "Snort", description: "Intrusion Detection System", icon: Shield },
   { name: "Sysmon", description: "System Activity Monitoring", icon: Activity },
+  { name: "Falco", description: "Runtime Security & Threat Detection", icon: Activity },
   { name: "Wireshark", description: "Network Protocol Analyzer & Forensics", icon: Network },
 ]
 
