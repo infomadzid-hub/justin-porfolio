@@ -165,7 +165,7 @@ export default function Portfolio() {
                   Justin Marius
                 </h1>
                 <h2 className="text-2xl lg:text-3xl text-gray-300 font-semibold">
-                  SOC Analyst | Cybersecurity Enthusiast
+                  SOC Analyst | Cybersecurity Junior Analyst
                 </h2>
                 <p className="text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
                   Passionné par la cybersécurité défensive spécialisé en SIEM, détection de menaces, analyse de logs et
@@ -410,6 +410,17 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12 text-blue-400">Formations</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="bg-gray-800 border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-white">License en Informatique Générale</CardTitle>
+                <CardDescription className="text-gray-300">École Nationale d&apos;Informatique (ENI)</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-400 text-sm">Diplôme universitaire</p>
+                <p className="text-gray-300 text-sm mt-2">Formation fondamentale en informatique générale et développement logiciel</p>
+              </CardContent>
+            </Card>
+
             <Card className="bg-gray-800 border-gray-700">
               <CardHeader>
                 <CardTitle className="text-white">Tryhackme SOC Level 1</CardTitle>
