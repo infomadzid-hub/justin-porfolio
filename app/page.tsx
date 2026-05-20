@@ -417,7 +417,7 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-400 text-sm">Diplôme universitaire</p>
-                <p className="text-gray-300 text-sm mt-2">Formation fondamentale en informatique générale et développement logiciel</p>
+                <p className="text-gray-300 text-sm mt-2">Formation fondamentale en réseau, sécurité et développement logiciel</p>
               </CardContent>
             </Card>
 
