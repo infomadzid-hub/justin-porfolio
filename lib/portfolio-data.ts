@@ -99,6 +99,14 @@ export const projects = [
     details:
       "Stage de 3 mois en tant que SOC Analyst dans un environnement cloud-native. Mise en place et optimisation de la surveillance proactive de clusters Kubernetes avec Falco pour la détection en temps réel, Wazuh pour la corrélation d'événements et Splunk pour l'analyse centralisée et la création de dashboards de sécurité avancés.",
   },
+  {
+    id: 12,
+    title: "Alternance - Entreprise AKATA",
+    description: "Spécialiste en Cybersécurité",
+    tags: ["Alternance", "Cybersécurité", "SOC", "SIEM", "Wazuh", "Splunk", "Détection de menaces"],
+    details:
+      "Alternance en tant que Spécialiste en Cybersécurité chez AKATA. Contributions à la sécurisation des infrastructures, mise en place de solutions de monitoring avancées, investigation des incidents de sécurité, et optimisation des processus de détection et réponse aux menaces.",
+  },
 ]
 
 export const certifications = {
